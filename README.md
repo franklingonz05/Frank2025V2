@@ -1,3 +1,56 @@
+# Reporte de Estado de Cuenta
+
+Este proyecto tiene como objetivo generar un reporte de estado de cuenta en formato PDF, que incluye información detallada sobre las tarjetas registradas, movimientos de la tarjeta seleccionada, y un formulario para registrar transacciones (compra o pago).
+
+## Descripción del Proyecto
+
+Este sistema permite a los usuarios ver el estado de cuenta de sus tarjetas de crédito, los movimientos asociados a cada tarjeta, y realizar nuevas transacciones como compras o pagos. El reporte final se genera en formato PDF, el cual incluye imágenes y detalles importantes.
+
+### Funcionalidades
+
+- **Registro de Tarjetas**: El sistema muestra todas las tarjetas registradas en un formato visual.
+- **Estado de Cuenta**: Genera un PDF con el estado de cuenta de la tarjeta seleccionada.
+- **Movimientos de la Tarjeta**: Muestra los movimientos realizados con la tarjeta de crédito seleccionada.
+- **Formulario de Transacciones**: Permite al usuario registrar una transacción, ya sea una compra o un pago.
+
+## Imágenes Incluidas en el Reporte
+
+A continuación se describen las imágenes que serán incluidas en el reporte PDF generado:
+
+1. **Tarjetas Registradas**
+   - **Imagen**: `Doc/imag1.png`
+   - **Descripción**: Lista de todas las tarjetas de crédito registradas en el sistema.
+
+2. **Estado de Cuenta**
+   - **Imagen**: `Doc/imag2.png`
+   - **Descripción**: Imagen que representa el estado de cuenta de la tarjeta seleccionada.
+
+3. **Movimientos de la Tarjeta**
+   - **Imagen**: `Doc/imag3.png`
+   - **Descripción**: Detalle de los movimientos realizados con la tarjeta de crédito seleccionada.
+
+4. **Formulario de Transacciones**
+   - **Imagen**: `Doc/imag4.png`
+   - **Descripción**: Formulario para registrar una transacción (compra o pago).
+
+## Cómo Funciona
+
+1. **Generación del Reporte**:
+   - El reporte PDF se genera con la información de las tarjetas registradas, el estado de cuenta, los movimientos de la tarjeta seleccionada, y un formulario para registrar transacciones.
+   
+2. **Flujo del Reporte**:
+   - El documento PDF comienza con el nombre del usuario (en este caso, "Franklin Gonzalez").
+   - Luego, se lista la información de todas las tarjetas registradas.
+   - Posteriormente, se detalla el estado de cuenta de la tarjeta seleccionada.
+   - Después, se muestran los movimientos de la tarjeta de crédito seleccionada.
+   - Finalmente, se incluye un formulario para registrar una nueva transacción (compra o pago).
+
+
+
+
+
+
+
 # Frank2025V2# CreditCard.Api
 
 La API `CreditCard.Api` es un servicio web RESTful que permite interactuar con información relacionada con tarjetas de crédito, incluyendo estados de cuenta, transacciones y detalles de tarjetas. La implementación sigue los patrones de diseño **Repositorio**, **UnitOfWork** y **CQRS** para facilitar la escalabilidad, mantenimiento y pruebas de la aplicación.
