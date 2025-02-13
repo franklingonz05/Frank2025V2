@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AccountStatementDTO" msprop:Generator_RowEvHandlerName="AccountStatementDTORowChangeEventHandler" msprop:Generator_RowDeletedName="AccountStatementDTORowDeleted" msprop:Generator_RowDeletingName="AccountStatementDTORowDeleting" msprop:Generator_RowEvArgName="AccountStatementDTORowChangeEvent" msprop:Generator_TablePropName="AccountStatementDTO" msprop:Generator_RowChangedName="AccountStatementDTORowChanged" msprop:Generator_RowChangingName="AccountStatementDTORowChanging" msprop:Generator_TableClassName="AccountStatementDTODataTable" msprop:Generator_RowClassName="AccountStatementDTORow" msprop:Generator_TableVarName="tableAccountStatementDTO" msprop:Generator_UserTableName="AccountStatementDTO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CardHolderName" msprop:Generator_ColumnPropNameInRow="CardHolderName" msprop:Generator_ColumnPropNameInTable="CardHolderNameColumn" msprop:Generator_ColumnVarNameInTable="columnCardHolderName" msprop:Generator_UserColumnName="CardHolderName" type="xs:string" minOccurs="0" />
+              <xs:element name="CardNumber" msprop:Generator_ColumnPropNameInRow="CardNumber" msprop:Generator_ColumnPropNameInTable="CardNumberColumn" msprop:Generator_ColumnVarNameInTable="columnCardNumber" msprop:Generator_UserColumnName="CardNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="CreditLimit" msprop:Generator_ColumnPropNameInRow="CreditLimit" msprop:Generator_ColumnPropNameInTable="CreditLimitColumn" msprop:Generator_ColumnVarNameInTable="columnCreditLimit" msprop:Generator_UserColumnName="CreditLimit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AvailableCredit" msprop:Generator_ColumnPropNameInRow="AvailableCredit" msprop:Generator_ColumnPropNameInTable="AvailableCreditColumn" msprop:Generator_ColumnVarNameInTable="columnAvailableCredit" msprop:Generator_UserColumnName="AvailableCredit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalBalance" msprop:Generator_ColumnPropNameInRow="TotalBalance" msprop:Generator_ColumnPropNameInTable="TotalBalanceColumn" msprop:Generator_ColumnVarNameInTable="columnTotalBalance" msprop:Generator_UserColumnName="TotalBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalPurchasesCurrentMonth" msprop:Generator_ColumnPropNameInRow="TotalPurchasesCurrentMonth" msprop:Generator_ColumnPropNameInTable="TotalPurchasesCurrentMonthColumn" msprop:Generator_ColumnVarNameInTable="columnTotalPurchasesCurrentMonth" msprop:Generator_UserColumnName="TotalPurchasesCurrentMonth" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalPurchasesPreviousMonth" msprop:Generator_ColumnPropNameInRow="TotalPurchasesPreviousMonth" msprop:Generator_ColumnPropNameInTable="TotalPurchasesPreviousMonthColumn" msprop:Generator_ColumnVarNameInTable="columnTotalPurchasesPreviousMonth" msprop:Generator_UserColumnName="TotalPurchasesPreviousMonth" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Email" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_UserColumnName="Email" type="xs:string" minOccurs="0" />
+              <xs:element name="PhoneNumber" msprop:Generator_ColumnPropNameInRow="PhoneNumber" msprop:Generator_ColumnPropNameInTable="PhoneNumberColumn" msprop:Generator_ColumnVarNameInTable="columnPhoneNumber" msprop:Generator_UserColumnName="PhoneNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="InterestCharged" msprop:Generator_ColumnPropNameInRow="InterestCharged" msprop:Generator_ColumnPropNameInTable="InterestChargedColumn" msprop:Generator_ColumnVarNameInTable="columnInterestCharged" msprop:Generator_UserColumnName="InterestCharged" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MinimumPayment" msprop:Generator_ColumnPropNameInRow="MinimumPayment" msprop:Generator_ColumnPropNameInTable="MinimumPaymentColumn" msprop:Generator_ColumnVarNameInTable="columnMinimumPayment" msprop:Generator_UserColumnName="MinimumPayment" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalAmountDue" msprop:Generator_ColumnPropNameInRow="TotalAmountDue" msprop:Generator_ColumnPropNameInTable="TotalAmountDueColumn" msprop:Generator_ColumnVarNameInTable="columnTotalAmountDue" msprop:Generator_UserColumnName="TotalAmountDue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalAmountDueWithInterest" msprop:Generator_ColumnPropNameInRow="TotalAmountDueWithInterest" msprop:Generator_ColumnPropNameInTable="TotalAmountDueWithInterestColumn" msprop:Generator_ColumnVarNameInTable="columnTotalAmountDueWithInterest" msprop:Generator_UserColumnName="TotalAmountDueWithInterest" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

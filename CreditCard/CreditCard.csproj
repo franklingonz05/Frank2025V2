@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>05801fd3-f00c-4759-8d1b-a0ca664465ab</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\RDLC\rpt_cuenta.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+    <PackageReference Include="QuestPDF" Version="2025.1.2" />
+    <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.26" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\RDLC\rpt_cuenta.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Reportes\DataSets\DataSet1.Designer.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Reportes\DataSets\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+  </ItemGroup>
+
+</Project>

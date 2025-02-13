@@ -1,0 +1,152 @@
+﻿@model CreditCard.Models.ViewModel.CreditCardDetails
+
+@{
+    ViewData["Title"] = "Detalles de la Tarjeta de Crédito";
+}
+
+<style>
+    .credit-card {
+        width: 300px;
+        height: 180px;
+        background-color: #2d3e50;
+        color: white;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-number {
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+
+    .card-holder {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .table th, .table td {
+        text-align: center;
+    }
+</style>
+
+<div class="container">
+    <!-- Detalles de la tarjeta de crédito -->
+    <div class="card">
+        <div class="card-header">
+            <h3>Información de la Tarjeta</h3>
+        </div>
+
+        <div class="credit-card">
+            <div class="card-content">
+                <div class="card-number">
+                    <span>@Model.CreditCard.CardNumber</span>
+                </div>
+                <div class="card-holder">
+                    <span>@Model.CreditCard.FirstName @Model.CreditCard.LastName</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <h4>Transacciones</h4>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Monto</th>
+                        <th>Descripción</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var transaction in Model.Transactions)
+                    {
+                        <tr>
+                            <td>@transaction.Type </td>
+                            <td>@transaction.Amount.ToString("C")</td>
+                            <td>@transaction.Description</td>
+                            <td>@transaction.TransactionDate.ToString("dd/MM/yyyy")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card-footer">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTransactionModal">Agregar Transacción</button>
+            <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">Volver</a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para agregar compra o pago -->
+<div class="modal fade" id="addTransactionModal" tabindex="-1" aria-labelledby="addTransactionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addTransactionModalLabel">Agregar Compra/Pago</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="transactionForm" asp-action="AddTransaction" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" id="CreditCardID" name="CreditCardID" value="@Model.CreditCard.CreditCardID" />
+                    <div>
+                        <label for="transactionType" class="form-label">Tipo de Transacción</label>
+                        <select class="form-select" id="transactionType" name="Type">
+                            <option value="1">Compra</option>
+                            <option value="2">Pago</option>
+                        </select>
+                        @if (ViewData.ModelState["Type"]?.Errors.Any() == true)
+                        {
+                            <div class="text-danger">
+                                @ViewData.ModelState["Type"]?.Errors[0].ErrorMessage
+                            </div>
+                        }
+                    </div>
+                    <div>
+                        <label for="transactionAmount" class="form-label">Monto</label>
+                        <input type="number" class="form-control" id="transactionAmount" name="Amount" placeholder="Monto" required />
+                        @if (ViewData.ModelState["Amount"]?.Errors.Any() == true)
+                        {
+                            <div class="text-danger">
+                                @ViewData.ModelState["Amount"]?.Errors[0].ErrorMessage
+                            </div>
+                        }
+                    </div>
+                    <div>
+                        <label for="transactionDescription" class="form-label">Descripción</label>
+                        <input type="text" class="form-control" id="transactionDescription" name="Description" placeholder="Descripción" required />
+                        @if (ViewData.ModelState["Description"]?.Errors.Any() == true)
+                        {
+                            <div class="text-danger">
+                                @ViewData.ModelState["Description"]?.Errors[0].ErrorMessage
+                            </div>
+                        }
+                    </div>
+                    <div>
+                        <label for="transactionDate" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="transactionDate" name="TransactionDate" required />
+                        @if (ViewData.ModelState["TransactionDate"]?.Errors.Any() == true)
+                        {
+                            <div class="text-danger">
+                                @ViewData.ModelState["TransactionDate"]?.Errors[0].ErrorMessage
+                            </div>
+                        }
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary" form="transactionForm">Guardar</button>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
