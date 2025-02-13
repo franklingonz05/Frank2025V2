@@ -19,22 +19,22 @@ A continuación se describen las imágenes que serán incluidas en el reporte PD
 
 1. **Tarjetas Registradas**
    - **Imagen**:
-     ![Tarjetas Registradas](Doc/imag1.png)
+     ![Tarjetas Registradas](Doc/img1.png)
    - **Descripción**: Lista de todas las tarjetas de crédito registradas en el sistema.
 
 2. **Estado de Cuenta**
    - **Imagen**:
-     ![Estado de Cuenta](Doc/imag2.png)
+     ![Estado de Cuenta](Doc/img2.png)
    - **Descripción**: Imagen que representa el estado de cuenta de la tarjeta seleccionada.
 
 3. **Movimientos de la Tarjeta**
    - **Imagen**:
-     ![Movimientos de la Tarjeta](Doc/imag3.png)
+     ![Movimientos de la Tarjeta](Doc/img3.png)
    - **Descripción**: Detalle de los movimientos realizados con la tarjeta de crédito seleccionada.
 
 4. **Formulario de Transacciones**
    - **Imagen**:
-     ![Formulario de Transacciones](Doc/imag4.png)
+     ![Formulario de Transacciones](Doc/img4.png)
    - **Descripción**: Formulario para registrar una transacción (compra o pago).
 
 
