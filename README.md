@@ -18,20 +18,25 @@ Este sistema permite a los usuarios ver el estado de cuenta de sus tarjetas de c
 A continuación se describen las imágenes que serán incluidas en el reporte PDF generado:
 
 1. **Tarjetas Registradas**
-   - **Imagen**: `Doc/imag1.png`
+   - **Imagen**:
+     ![Tarjetas Registradas](Doc/imag1.png)
    - **Descripción**: Lista de todas las tarjetas de crédito registradas en el sistema.
 
 2. **Estado de Cuenta**
-   - **Imagen**: `Doc/imag2.png`
+   - **Imagen**:
+     ![Estado de Cuenta](Doc/imag2.png)
    - **Descripción**: Imagen que representa el estado de cuenta de la tarjeta seleccionada.
 
 3. **Movimientos de la Tarjeta**
-   - **Imagen**: `Doc/imag3.png`
+   - **Imagen**:
+     ![Movimientos de la Tarjeta](Doc/imag3.png)
    - **Descripción**: Detalle de los movimientos realizados con la tarjeta de crédito seleccionada.
 
 4. **Formulario de Transacciones**
-   - **Imagen**: `Doc/imag4.png`
+   - **Imagen**:
+     ![Formulario de Transacciones](Doc/imag4.png)
    - **Descripción**: Formulario para registrar una transacción (compra o pago).
+
 
 ## Cómo Funciona
 
